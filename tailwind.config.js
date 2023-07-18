@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'red-primary': '#E73626',
+        'red-secondary': '#FDEFEE',
+        'red-tertiary': '#8D2319',
+        
+        'grey-text': '#E0E0E0',
+        'grey-placeholder': '#455A64',
+  
+        'grey-darker': '#D6D5D5',
+        'black-lighter': '#a6a6a6'
+      },
+      fontFamily: {
+        'sans': ['Recursive', ...defaultTheme.fontFamily.sans]
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
